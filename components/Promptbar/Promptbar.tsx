@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 import { PromptFolders } from '../Folders/Prompt/PromptFolders';
 import { Search } from '../Sidebar/Search';
 import { PromptbarSettings } from './PromptbarSettings';
+import { Ad } from './Ad';
 import { Prompts } from './Prompts';
 
 interface Props {
@@ -163,7 +164,7 @@ export const Promptbar: FC<Props> = ({
           </div>
         )}
       </div>
-
+      <Ad />
       <PromptbarSettings />
     </div>
   );
