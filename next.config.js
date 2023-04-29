@@ -5,7 +5,7 @@ const nextConfig = {
   i18n,
   reactStrictMode: true,
   images: {
-    domains: ['markel-1253714543.cos.ap-singapore.myqcloud.com'],
+    domains: ['markel-1253714543.cos.accelerate.myqcloud.com'],
   },
 
   webpack(config, { isServer, dev }) {
