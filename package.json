@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "deploy": "npm run build && pm2 start npm --name 'chatbot' -- start"
+    "deploy": "npm run build && pm2 start npm --name 'chatbot-ui' -- start"
    },
   "dependencies": {
     "@dqbd/tiktoken": "^1.0.2",
