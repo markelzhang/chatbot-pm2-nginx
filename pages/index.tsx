@@ -35,6 +35,7 @@ import Head from 'next/head';
 import { useEffect, useRef, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import toast from 'react-hot-toast';
+import Script from 'next/script'
 
 interface HomeProps {
   serverSideApiKeyIsSet: boolean;
@@ -634,6 +635,20 @@ const Home: React.FC<HomeProps> = ({
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Script
+          src="https://tam.cdn-go.cn/aegis-sdk/latest/aegis.min.js"
+          onLoad={() => {
+            if (Aegis) {
+              var aegis = new Aegis({
+                id: 'W75KVsadER2RL90d6j', // 上报 id
+                reportApiSpeed: true, // 接口测速
+                reportAssetSpeed: true, // 静态资源测速
+                spa: true, // spa 应用页面跳转的时候开启 pv 计算
+                hostUrl: 'https://rumt-sg.com'
+              });
+            }
+          }}
+      />
       {selectedConversation && (
         <main
           className={`flex h-screen w-screen flex-col text-sm text-white dark:text-white ${lightMode}`}
